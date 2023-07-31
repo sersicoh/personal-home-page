@@ -1,9 +1,5 @@
-function App() {
-    return (
-        <p>
-            Ta strona jest w trakcie tworzenia, zajrzyj za jakiś czas 😉
-        </p>
-    );
-}
+import { Header } from "./features/Header/Header";
 
-export default App;
+export const App = () => {
+  return <Header />;
+};
