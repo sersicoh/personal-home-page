@@ -3,7 +3,9 @@ import { theme } from "../../theme";
 
 export const ContainerStyled = styled.div`
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: ${theme.breakpoint.maxContentSize}px;
 

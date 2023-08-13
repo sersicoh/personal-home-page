@@ -6,6 +6,7 @@ import {
   SelfieImage,
   HeaderCrumb,
   HeaderDescription,
+  HeaderButton,
 } from "./header.styles";
 
 export const Header = () => {
@@ -22,6 +23,7 @@ export const Header = () => {
           tag={"p-mid"}
           content={`This is my private GitHub Profile. You can find hire my first serious steps with programming. I'm currently learning React, Redux, JavaScripts and I really like to learn TypeScript.`}
         />
+        <HeaderButton>dupa</HeaderButton>
       </HeaderBanner>
       <Typography tag={"h2"} content={"Dupa"} />
       <Typography tag={"h3"} content={"Dupa"} />
