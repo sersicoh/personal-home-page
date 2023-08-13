@@ -7,6 +7,7 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.color || theme.colors.background};
   max-width: ${theme.breakpoint.maxContentSize}px;
 
   @media (max-width: ${theme.breakpoint.tabletMax}px) {
