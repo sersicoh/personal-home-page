@@ -14,7 +14,7 @@ import {
 export const Header = () => {
   //TODO dorobić darkMode - pamiętaj o theme
   return (
-    <Container color={"#FBFBFE"}>
+    <Container backgroundColor={"#FBFBFE"}>
       <HeaderBanner>
         <SelfieImage
           src="https://lh3.googleusercontent.com/a/AAcHTted5zjPNUv2Zh-pzL1Ff8lDBi2xikWohywcgbWnShwpYoS0=s288-c-no"

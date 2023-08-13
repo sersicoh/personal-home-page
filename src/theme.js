@@ -9,6 +9,8 @@ export const theme = {
     buttonBorder: "#D1D5DA",
     buttonFocus: "#8CC2FF",
     buttonSelected: "#14462033",
+    shadow: "#090A330A",
+    border: "#D1D5DA4C",
   },
   breakpoint: {
     mobileMax: 767,

@@ -7,8 +7,14 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.color || theme.colors.background};
+  border-radius: 4px;
+  padding: ${(props) => (props.padding ? `32px` : null)};
+  border: ${(props) => (props.border ? `6px solid ${theme.colors.border}` : null)};
+  background-color: ${(props) =>
+    props.backgroundColor || theme.colors.background};
   max-width: ${theme.breakpoint.maxContentSize}px;
+  box-shadow: ${(props) =>
+    props.shadow ? `0px 16px 58px 0px ${theme.colors.shadow}` : null};
 
   @media (max-width: ${theme.breakpoint.tabletMax}px) {
     align-items: flex-start;
