@@ -8,12 +8,14 @@ export const App = () => {
     <>
       <Header margin="120px auto 72px" />
       <CurrentSkills
+        align={"flex-start"}
         backgroundColor={theme.colors.white}
         shadow={`0px 16px 58px 0px ${theme.colors.shadow}`}
         padding="32px"
         margin="0px auto 72px"
       />
       <FutureSkills
+        align={"flex-start"}
         backgroundColor={theme.colors.white}
         shadow={`0px 16px 58px 0px ${theme.colors.shadow}`}
         padding="32px"
