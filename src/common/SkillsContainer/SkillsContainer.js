@@ -12,7 +12,6 @@ export const SkillsContainer = (props) => {
           <Item key={item}>{item}</Item>
         ))}
       </List>
-      ;
     </Container>
   );
 };

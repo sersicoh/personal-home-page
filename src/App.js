@@ -1,3 +1,4 @@
+import { WorkInProgressComponent } from "./WorkInProgressComponent.styles";
 import { CurrentSkills } from "./features/CurrentSkills/CurrentSkills";
 import { FutureSkills } from "./features/FutureSkills/FutureSkills";
 import { Header } from "./features/Header/Header";
@@ -6,6 +7,9 @@ import { theme } from "./theme";
 export const App = () => {
   return (
     <>
+      <WorkInProgressComponent>
+        Page still work in progress <br /> Strona nadal w budowie
+      </WorkInProgressComponent>
       <Header margin="120px auto 72px" />
       <CurrentSkills
         align={"flex-start"}
