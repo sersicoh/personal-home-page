@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { theme } from "../../theme";
+import { theme } from "../../../theme";
 export const ButtonContainer = styled.button`
   color: ${theme.colors.white};
   display: flex;

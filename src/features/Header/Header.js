@@ -1,6 +1,6 @@
 import { Container } from "../../common/Container/Container";
 import { Typography } from "../../common/Typography/Typography";
-import { HireButton } from "../HireButton/HireButton";
+import { HireButton } from "./HireButton/HireButton";
 import {
   HeaderName,
   HeaderBanner,
@@ -11,10 +11,10 @@ import {
   HeaderDarkMode,
 } from "./header.styles";
 
-export const Header = () => {
+export const Header = (props) => {
   //TODO dorobić darkMode - pamiętaj o theme
   return (
-    <Container backgroundColor={"#FBFBFE"}>
+    <Container {...props}>
       <HeaderBanner>
         <SelfieImage
           src="https://lh3.googleusercontent.com/a/AAcHTted5zjPNUv2Zh-pzL1Ff8lDBi2xikWohywcgbWnShwpYoS0=s288-c-no"

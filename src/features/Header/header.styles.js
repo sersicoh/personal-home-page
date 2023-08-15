@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 export const HeaderBanner = styled.section`
   display: grid;
   width: 100%;
-  margin: 120px 0 72px 0;
   justify-content: center;
   grid-template-columns: max-content 1fr;
   grid-template-areas:
