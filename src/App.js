@@ -27,7 +27,13 @@ export const App = () => {
         padding="32px"
         margin="0px auto 72px"
       />
-      <PortfolioSection />
+      <PortfolioSection
+        backgroundColor={theme.colors.white}
+        shadow={`0px 16px 58px 0px ${theme.colors.shadow}`}
+        padding="56px"
+        border={`6px solid ${theme.colors.border}`}
+        hoverColor={theme.colors.projectTileOnHover}
+      />
       <Footer />
     </>
   );

@@ -16,6 +16,10 @@ export const ContainerStyled = styled.div`
   max-width: ${theme.breakpoint.maxContentSize}px;
   box-shadow: ${(props) => (props.shadow ? props.shadow : null)};
 
+  &:hover {
+    border-color: ${(props) => (props.hoverColor ? props.hoverColor : null)};
+  }
+
   @media (max-width: ${theme.breakpoint.tabletMax}px) {
     align-items: ${(props) => (props.align ? props.align : null)};
   }

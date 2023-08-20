@@ -11,6 +11,7 @@ export const theme = {
     buttonSelected: "#14462033",
     shadow: "#090A330A",
     border: "#D1D5DA4C",
+    projectTileOnHover: "#0366D633",
   },
   breakpoint: {
     mobileMax: 767,

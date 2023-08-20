@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { theme } from "../../../theme";
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.a`
   color: ${theme.colors.white};
   display: flex;
   background-color: ${theme.colors.mainBlue};
@@ -10,6 +10,7 @@ export const ButtonContainer = styled.button`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  text-decoration: none;
   border-radius: 4px;
   &:hover {
     box-shadow: 0px 0px 0px 2px ${theme.colors.buttonFocus};

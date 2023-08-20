@@ -1,14 +1,15 @@
 import { Container } from "../../common/Container/Container";
+import { ProjectTile } from "../../common/ProjectTile/ProjectTile";
 import {
   GithubIconComponentStyled,
   PortfolioSectionContainer,
   PortfolioSectionHeader,
   PortfolioSubTitle,
   PortfolioTitle,
+  ProjectContainer,
 } from "./portfolioSection.styles";
 
-export const PortfolioSection = () => {
-
+export const PortfolioSection = (props) => {
   //TODO zrobić kontenery dla stron
   return (
     <Container>
@@ -18,7 +19,12 @@ export const PortfolioSection = () => {
           <PortfolioTitle tag={"h2"} content={"Portfolio"} />
           <PortfolioSubTitle tag={"p-lead"} content={"My recent projects"} />
         </PortfolioSectionHeader>
-
+        <ProjectContainer>
+          <ProjectTile {...props} />
+          <ProjectTile {...props} />
+          <ProjectTile {...props} />
+          <ProjectTile {...props} />
+        </ProjectContainer>
       </PortfolioSectionContainer>
     </Container>
   );

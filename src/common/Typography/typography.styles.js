@@ -52,8 +52,8 @@ export const TypographyMail = styled.a`
   margin: 0;
   letter-spacing: 0.05em;
   text-decoration: none;
-  color: ${(props) => props.backgroundColor || theme.colors.black};
+  color: ${(props) => props.backgroundColor || theme.colors.mainBlue};
   &:hover {
-    color: ${theme.colors.mainBlue};
+    color: ${theme.colors.buttonSelected};
   }
 `;

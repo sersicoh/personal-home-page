@@ -8,7 +8,7 @@ import {
   TypographyParagraphMid,
 } from "./typography.styles";
 
-export const Typography = ({ tag, content, color, ...props }) => {
+export const Typography = ({ tag, content, href, color, ...props }) => {
   switch (tag) {
     case "h1":
       return (
@@ -53,6 +53,12 @@ export const Typography = ({ tag, content, color, ...props }) => {
           href={`mailto: ${content}`}
           {...props}
         >
+          {content}
+        </TypographyMail>
+      );
+    case "a":
+      return (
+        <TypographyMail backgroundColor={color} href={`${href}`} {...props}>
           {content}
         </TypographyMail>
       );
