@@ -9,9 +9,9 @@ import { theme } from "./theme";
 export const App = () => {
   return (
     <>
-      {/* <WorkInProgressComponent>
+      <WorkInProgressComponent>
         Page still work in progress <br /> Strona nadal w budowie
-      </WorkInProgressComponent> */}
+      </WorkInProgressComponent>
       <Header margin="120px auto 72px" />
       <CurrentSkills
         align={"flex-start"}
