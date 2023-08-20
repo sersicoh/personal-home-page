@@ -1,15 +1,14 @@
 import { Container } from "../Container/Container";
-import { Typography } from "../Typography/Typography";
-import { Item, List, SkillsBorderLine } from "./skillsContainer.styles";
+import { Item, List, SkillContent, SkillsBorderLine, SkillsTitle } from "./skillsContainer.styles";
 //TODO stylowanie elementow skilli
 export const SkillsContainer = (props) => {
   return (
     <Container {...props}>
-      <Typography tag={"h2"} content={props.header} />
+      <SkillsTitle tag={"h2"} content={props.header} />
       <SkillsBorderLine />
       <List>
         {props.content.map((item) => (
-          <Item key={item}>{item}</Item>
+          <Item key={item}>{<SkillContent tag={"p-lead"} content={item}/>}</Item>
         ))}
       </List>
     </Container>

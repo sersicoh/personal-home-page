@@ -46,3 +46,13 @@ export const TypographyCrumb = styled.p`
   text-transform: uppercase;
   color: ${(props) => props.backgroundColor || theme.colors.crumb};
 `;
+export const TypographyMail = styled.p`
+  font-weight: 900;
+  font-size: 32px;
+  margin: 0;
+  letter-spacing: 0.05em;
+  color: ${(props) => props.backgroundColor || theme.colors.black};
+  :hover {
+    color: ${theme.colors.mainBlue};
+  }
+`;

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Typography } from "../../common/Typography/Typography";
 
 export const HeaderBanner = styled.section`
   display: grid;
@@ -25,15 +26,15 @@ export const HeaderDarkMode = styled.div`
   justify-content: flex-end;
   padding-bottom: 38px;
 `;
-export const HeaderCrumb = styled.div`
+export const HeaderCrumb = styled(Typography)`
   grid-area: crumb;
   padding-bottom: 12px;
 `;
-export const HeaderName = styled.div`
+export const HeaderName = styled(Typography)`
   grid-area: name;
   padding-bottom: 35px;
 `;
-export const HeaderDescription = styled.div`
+export const HeaderDescription = styled(Typography)`
   grid-area: description;
   padding-bottom: 32px;
 `;

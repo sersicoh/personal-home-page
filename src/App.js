@@ -1,15 +1,17 @@
 import { WorkInProgressComponent } from "./WorkInProgressComponent.styles";
 import { CurrentSkills } from "./features/CurrentSkills/CurrentSkills";
+import { Footer } from "./features/Footer/Footer";
 import { FutureSkills } from "./features/FutureSkills/FutureSkills";
 import { Header } from "./features/Header/Header";
+import { PortfolioSection } from "./features/PortfolioSection/PortfolioSection";
 import { theme } from "./theme";
 
 export const App = () => {
   return (
     <>
-      <WorkInProgressComponent>
+      {/* <WorkInProgressComponent>
         Page still work in progress <br /> Strona nadal w budowie
-      </WorkInProgressComponent>
+      </WorkInProgressComponent> */}
       <Header margin="120px auto 72px" />
       <CurrentSkills
         align={"flex-start"}
@@ -25,6 +27,8 @@ export const App = () => {
         padding="32px"
         margin="0px auto 72px"
       />
+      <PortfolioSection />
+      <Footer />
     </>
   );
 };

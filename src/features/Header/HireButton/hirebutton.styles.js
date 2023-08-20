@@ -3,7 +3,7 @@ import { theme } from "../../../theme";
 export const ButtonContainer = styled.button`
   color: ${theme.colors.white};
   display: flex;
-  background-color: ${theme.colors.buttonBase};
+  background-color: ${theme.colors.mainBlue};
   padding: 12px 16px;
   border: 1px solid ${theme.colors.buttonBorder};
   max-width: max-content;
