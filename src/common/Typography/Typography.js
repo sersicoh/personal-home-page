@@ -48,7 +48,11 @@ export const Typography = ({ tag, content, color, ...props }) => {
       );
     case "mail":
       return (
-        <TypographyMail backgroundColor={color} {...props}>
+        <TypographyMail
+          backgroundColor={color}
+          href={`mailto: ${content}`}
+          {...props}
+        >
           {content}
         </TypographyMail>
       );
