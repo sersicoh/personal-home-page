@@ -53,7 +53,7 @@ export const TypographyMail = styled.a`
   letter-spacing: 0.05em;
   text-decoration: none;
   color: ${(props) => props.backgroundColor || theme.colors.black};
-  :hover {
+  &:hover {
     color: ${theme.colors.mainBlue};
   }
 `;
