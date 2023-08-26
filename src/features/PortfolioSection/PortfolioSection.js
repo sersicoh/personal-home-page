@@ -10,7 +10,6 @@ import {
 } from "./portfolioSection.styles";
 
 export const PortfolioSection = (props) => {
-
   const contnetto = [
     {
       title: "Tytuł1",
@@ -41,7 +40,7 @@ export const PortfolioSection = (props) => {
       code: "https://link.demo.com",
     },
   ];
-  
+
   return (
     <Container>
       <PortfolioSectionContainer>

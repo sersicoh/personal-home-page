@@ -38,3 +38,9 @@ export const LinkedinIconStyled = styled(LinkedinIconComponent)`
     fill: ${theme.colors.mainBlue};
   }
 `;
+//TODO dokonczyc linkowanie i stylowanie ikon
+export const LinkIconContainer = styled.a`
+  :hover {
+    fill: ${theme.colors.mainBlue};
+  }
+`;

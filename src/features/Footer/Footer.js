@@ -5,6 +5,7 @@ import {
   FooterDescription,
   GithubIconStyled,
   IconContainer,
+  LinkIconContainer,
   LinkedinIconStyled,
   Mail,
 } from "./footer.styles";
@@ -19,7 +20,9 @@ export const Footer = () => {
         content={`This is my private GitHub Profile. You can find hire my first serious steps with programming. I'm currently learning React, Redux, JavaScripts and I really like to learn TypeScript.`}
       />
       <IconContainer>
-        <GithubIconStyled />
+        <LinkIconContainer href="https://github.com/sersicoh">
+          <GithubIconStyled />
+        </LinkIconContainer>
         <FacebookIconStyled />
         <LinkedinIconStyled />
       </IconContainer>
