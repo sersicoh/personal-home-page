@@ -9,15 +9,7 @@ import {
   Title,
 } from "./projectTile.styles";
 
-export const ProjectTile = (props) => {
-  const contnetto = {
-    title: "Tytuł",
-    description:
-      "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-    demo: "https://link.demo.com",
-    code: "https://link.demo.com",
-  };
-
+export const ProjectTile = ({ contnetto, ...props }) => {
   return (
     <Container {...props}>
       <Title

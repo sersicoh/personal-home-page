@@ -10,6 +10,38 @@ import {
 } from "./portfolioSection.styles";
 
 export const PortfolioSection = (props) => {
+
+  const contnetto = [
+    {
+      title: "Tytuł1",
+      description:
+        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
+      demo: "https://link.demo.com",
+      code: "https://link.demo.com",
+    },
+    {
+      title: "Tytuł2",
+      description:
+        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
+      demo: "https://link.demo.com",
+      code: "https://link.demo.com",
+    },
+    {
+      title: "Tytuł3",
+      description:
+        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
+      demo: "https://link.demo.com",
+      code: "https://link.demo.com",
+    },
+    {
+      title: "Tytuł4",
+      description:
+        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
+      demo: "https://link.demo.com",
+      code: "https://link.demo.com",
+    },
+  ];
+  
   return (
     <Container>
       <PortfolioSectionContainer>
@@ -19,10 +51,9 @@ export const PortfolioSection = (props) => {
           <PortfolioSubTitle tag={"p-lead"} content={"My recent projects"} />
         </PortfolioSectionHeader>
         <ProjectContainer>
-          <ProjectTile {...props} />
-          <ProjectTile {...props} />
-          <ProjectTile {...props} />
-          <ProjectTile {...props} />
+          {contnetto.map((item) => (
+            <ProjectTile contnetto={item} key={item.title} {...props} />
+          ))}
         </ProjectContainer>
       </PortfolioSectionContainer>
     </Container>
