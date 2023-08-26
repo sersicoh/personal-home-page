@@ -3,7 +3,8 @@ import {
   TypographyHeaderH1,
   TypographyHeaderH2,
   TypographyHeaderH3,
-  TypographyMail,
+  TypographyLink,
+  TypographyMailLink,
   TypographyParagraphLead,
   TypographyParagraphMid,
 } from "./typography.styles";
@@ -48,19 +49,19 @@ export const Typography = ({ tag, content, href, color, ...props }) => {
       );
     case "mail":
       return (
-        <TypographyMail
+        <TypographyMailLink
           backgroundColor={color}
           href={`mailto: ${content}`}
           {...props}
         >
           {content}
-        </TypographyMail>
+        </TypographyMailLink>
       );
     case "a":
       return (
-        <TypographyMail backgroundColor={color} href={`${href}`} {...props}>
+        <TypographyLink backgroundColor={color} href={`${href}`} {...props}>
           {content}
-        </TypographyMail>
+        </TypographyLink>
       );
 
     default:

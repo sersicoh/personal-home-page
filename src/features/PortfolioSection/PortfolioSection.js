@@ -10,7 +10,6 @@ import {
 } from "./portfolioSection.styles";
 
 export const PortfolioSection = (props) => {
-  //TODO zrobić kontenery dla stron
   return (
     <Container>
       <PortfolioSectionContainer>

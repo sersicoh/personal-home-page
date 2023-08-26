@@ -46,12 +46,24 @@ export const TypographyCrumb = styled.p`
   text-transform: uppercase;
   color: ${(props) => props.backgroundColor || theme.colors.crumb};
 `;
-export const TypographyMail = styled.a`
+export const TypographyMailLink = styled.a`
   font-weight: 900;
   font-size: 32px;
   margin: 0;
   letter-spacing: 0.05em;
   text-decoration: none;
+  color: ${(props) => props.backgroundColor || theme.colors.black};
+  &:hover {
+    color: ${theme.colors.mainBlue};
+  }
+`;
+export const TypographyLink = styled.a`
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  text-decoration-color: ${theme.colors.projectTileOnHover};
   color: ${(props) => props.backgroundColor || theme.colors.mainBlue};
   &:hover {
     color: ${theme.colors.buttonSelected};

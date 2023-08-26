@@ -10,7 +10,6 @@ import {
 } from "./footer.styles";
 
 export const Footer = () => {
-  //TODO dorobić ikony i wrzucić do wrappera
   return (
     <Container>
       <FooterCrumb tag={"crumb"} content={"let's talk"} />

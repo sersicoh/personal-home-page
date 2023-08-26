@@ -11,11 +11,18 @@ export const Description = styled(Typography)`
 export const Links = styled.div`
   display: flex;
   gap: 8px;
+  font-size: 10px;
 `;
 
-export const LinksContainer = styled.div`
+export const RowContainer = styled.div`
+  display: grid;
+  grid-row-gap: 8px;
+`;
+
+export const ColumnContainer = styled.div`
   display: grid;
   grid-template-columns: 100px 1fr;
+  justify-content: center;
   grid-template-areas:
     "preffix link"
     "preffix link";
