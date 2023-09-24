@@ -9,23 +9,25 @@ import {
   Title,
 } from "./projectTile.styles";
 
-export const ProjectTile = ({ contnetto, ...props }) => {
+export const ProjectTile = ({
+  name,
+  description,
+  homepage,
+  html_url,
+  ...props
+}) => {
   return (
     <Container {...props}>
-      <Title
-        tag={"h3"}
-        content={contnetto.title}
-        color={theme.colors.mainBlue}
-      />
-      <Description tag={"p-lead"} content={contnetto.description} />
+      <Title tag={"h3"} content={name} color={theme.colors.mainBlue} />
+      <Description tag={"p-lead"} content={description} />
       <RowContainer>
         <ColumnContainer>
           <Preffix tag={"p-lead"} content={"Demo:"} />
-          <Link tag={"a"} content={contnetto.demo} />
+          <Link tag={"a"} href={homepage} content={homepage} />
         </ColumnContainer>
         <ColumnContainer>
           <Preffix tag={"p-lead"} content={"Code:"} />
-          <Link tag={"a"} content={contnetto.code} />
+          <Link tag={"a"} href={html_url} content={html_url} />
         </ColumnContainer>
       </RowContainer>
     </Container>

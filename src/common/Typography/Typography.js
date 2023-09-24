@@ -59,7 +59,7 @@ export const Typography = ({ tag, content, href, color, ...props }) => {
       );
     case "a":
       return (
-        <TypographyLink backgroundColor={color} href={`${href}`} {...props}>
+        <TypographyLink backgroundColor={color} href={`${href}`} target="_blank" rel="noreferrer noopener" {...props} >
           {content}
         </TypographyLink>
       );

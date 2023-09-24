@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../common/Container/Container";
 import { ProjectTile } from "../../common/ProjectTile/ProjectTile";
 import {
@@ -8,38 +9,22 @@ import {
   PortfolioTitle,
   ProjectContainer,
 } from "./portfolioSection.styles";
+import {
+  fetchRepositories,
+  gitUserRepositories,
+  gitUserRepositoriesLoadingStatus,
+} from "../../services/sliceGitUserRepositories";
+import { useEffect } from "react";
 
 export const PortfolioSection = (props) => {
-  const contnetto = [
-    {
-      title: "Tytuł1",
-      description:
-        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-      demo: "https://link.demo.com",
-      code: "https://link.demo.com",
-    },
-    {
-      title: "Tytuł2",
-      description:
-        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-      demo: "https://link.demo.com",
-      code: "https://link.demo.com",
-    },
-    {
-      title: "Tytuł3",
-      description:
-        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-      demo: "https://link.demo.com",
-      code: "https://link.demo.com",
-    },
-    {
-      title: "Tytuł4",
-      description:
-        "Project description, e.g. website where you can search for favourite movies and people. Project description, e.g. website where you can search.",
-      demo: "https://link.demo.com",
-      code: "https://link.demo.com",
-    },
-  ];
+  const dispatch = useDispatch();
+
+  const fetchStatus = useSelector(gitUserRepositoriesLoadingStatus);
+  const repositories = useSelector(gitUserRepositories);
+  console.log(fetchStatus);
+  useEffect(() => {
+    dispatch(fetchRepositories("sersicoh"));
+  }, [dispatch]);
 
   return (
     <Container>
@@ -49,11 +34,34 @@ export const PortfolioSection = (props) => {
           <PortfolioTitle tag={"h2"} content={"Portfolio"} />
           <PortfolioSubTitle tag={"p-lead"} content={"My recent projects"} />
         </PortfolioSectionHeader>
-        <ProjectContainer>
-          {contnetto.map((item) => (
-            <ProjectTile contnetto={item} key={item.title} {...props} />
-          ))}
-        </ProjectContainer>
+        {(() => {
+          switch (fetchStatus) {
+            case "null":
+            case "loading":
+              return <div>ładuje</div>;
+            case "success":
+              return (
+                <ProjectContainer>
+                  {repositories.map(
+                    ({ id, name, description, homepage, html_url }) => (
+                      <ProjectTile
+                        key={id}
+                        name={name}
+                        description={description}
+                        homepage={homepage ? homepage : "brak linku"}
+                        html_url={html_url ? html_url : "brak linku"}
+                        {...props}
+                      />
+                    )
+                  )}
+                </ProjectContainer>
+              );
+            case "error":
+              return <div>błąd</div>;
+            default:
+              throw new Error(`invalid status: ${fetchStatus}`);
+          }
+        })()}
       </PortfolioSectionContainer>
     </Container>
   );
