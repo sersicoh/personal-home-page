@@ -1,22 +1,23 @@
 import { styled } from "styled-components";
-import { theme } from "../../../theme";
 export const ButtonContainer = styled.a`
-  color: ${theme.colors.white};
+  color: ${(props) => props.theme.colors.button};
   display: flex;
-  background-color: ${theme.colors.mainBlue};
+  background-color: ${(props) => props.theme.colors.backgroundButton};
   padding: 12px 16px;
-  border: 1px solid ${theme.colors.buttonBorder};
+  border: 1px solid ${(props) => props.theme.colors.buttonBorder};
   max-width: max-content;
   justify-content: center;
   align-items: center;
   gap: 16px;
   text-decoration: none;
   border-radius: 4px;
+  transition: all 0.25s ease;
   &:hover {
-    box-shadow: 0px 0px 0px 2px ${theme.colors.buttonFocus};
+    box-shadow: 0px 0px 0px 2px ${(props) => props.theme.colors.buttonFocus};
+    transform: scale(95%);
   }
   &:active {
-    box-shadow: 0px 2px 0px 0px ${theme.colors.buttonSelected} inset;
+    box-shadow: 0px 2px 0px 0px ${(props) => props.theme.colors.buttonSelected} inset;
   }
 `;
 

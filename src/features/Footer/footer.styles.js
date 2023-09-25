@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 import { Typography } from "../../common/Typography/Typography";
-import { theme } from "../../theme";
 import { GithubIconComponent } from "../../icons/GithubIconComponent";
 import { FacebookIconComponent } from "../../icons/FacebookIconComponent";
 import { LinkedinIconComponent } from "../../icons/LinkedinIconComponent";
@@ -24,23 +23,22 @@ export const IconContainer = styled.div`
 `;
 
 export const GithubIconStyled = styled(GithubIconComponent)`
+  transition: all 0.25s ease;
   :hover {
-    fill: ${theme.colors.mainBlue};
+    fill: ${(props) => props.theme.colors.iconHover};
   }
 `;
 export const FacebookIconStyled = styled(FacebookIconComponent)`
+  transition: all 0.25s ease;
   :hover {
-    fill: ${theme.colors.mainBlue};
+    fill: ${(props) => props.theme.colors.iconHover};
   }
 `;
 export const LinkedinIconStyled = styled(LinkedinIconComponent)`
+  transition: all 0.25s ease;
   :hover {
-    fill: ${theme.colors.mainBlue};
+    fill: ${(props) => props.theme.colors.iconHover};
   }
 `;
 //TODO dokonczyc linkowanie i stylowanie ikon
-export const LinkIconContainer = styled.a`
-  :hover {
-    fill: ${theme.colors.mainBlue};
-  }
-`;
+export const LinkIconContainer = styled.a``;

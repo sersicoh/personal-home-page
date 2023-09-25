@@ -11,7 +11,6 @@ import {
 } from "./header.styles";
 
 export const Header = (props) => {
-  //TODO dorobić darkMode - pamiętaj o theme
   return (
     <Container {...props}>
       <HeaderBanner>

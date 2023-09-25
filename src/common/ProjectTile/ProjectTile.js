@@ -1,4 +1,3 @@
-import { theme } from "../../theme";
 import { Container } from "../Container/Container";
 import {
   ColumnContainer,
@@ -18,7 +17,11 @@ export const ProjectTile = ({
 }) => {
   return (
     <Container {...props}>
-      <Title tag={"h3"} content={name} color={theme.colors.mainBlue} />
+      <Title
+        tag={"h3"}
+        content={name}
+        color={(props) => props.theme.colors.projectTileTitle}
+      />
       <Description tag={"p-lead"} content={description} />
       <RowContainer>
         <ColumnContainer>

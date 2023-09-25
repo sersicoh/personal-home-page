@@ -48,8 +48,8 @@ export const PortfolioSection = (props) => {
                         key={id}
                         name={name}
                         description={description}
-                        homepage={homepage ? homepage : "brak linku"}
-                        html_url={html_url ? html_url : "brak linku"}
+                        homepage={homepage ? homepage : "no content to display"}
+                        html_url={html_url ? html_url : "no content to display"}
                         {...props}
                       />
                     )

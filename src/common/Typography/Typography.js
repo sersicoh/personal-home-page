@@ -13,44 +13,44 @@ export const Typography = ({ tag, content, href, color, ...props }) => {
   switch (tag) {
     case "h1":
       return (
-        <TypographyHeaderH1 backgroundColor={color} {...props}>
+        <TypographyHeaderH1 color={color} {...props}>
           {content}
         </TypographyHeaderH1>
       );
     case "h2":
       return (
-        <TypographyHeaderH2 backgroundColor={color} {...props}>
+        <TypographyHeaderH2 color={color} {...props}>
           {content}
         </TypographyHeaderH2>
       );
     case "h3":
       return (
-        <TypographyHeaderH3 backgroundColor={color} {...props}>
+        <TypographyHeaderH3 color={color} {...props}>
           {content}
         </TypographyHeaderH3>
       );
     case "p-mid":
       return (
-        <TypographyParagraphMid backgroundColor={color} {...props}>
+        <TypographyParagraphMid color={color} {...props}>
           {content}
         </TypographyParagraphMid>
       );
     case "p-lead":
       return (
-        <TypographyParagraphLead backgroundColor={color} {...props}>
+        <TypographyParagraphLead color={color} {...props}>
           {content}
         </TypographyParagraphLead>
       );
     case "crumb":
       return (
-        <TypographyCrumb backgroundColor={color} {...props}>
+        <TypographyCrumb color={color} {...props}>
           {content}
         </TypographyCrumb>
       );
     case "mail":
       return (
         <TypographyMailLink
-          backgroundColor={color}
+          color={color}
           href={`mailto: ${content}`}
           {...props}
         >
@@ -59,7 +59,7 @@ export const Typography = ({ tag, content, href, color, ...props }) => {
       );
     case "a":
       return (
-        <TypographyLink backgroundColor={color} href={`${href}`} target="_blank" rel="noreferrer noopener" {...props} >
+        <TypographyLink color={color} href={`${href}`} target="_blank" rel="noreferrer noopener" {...props} >
           {content}
         </TypographyLink>
       );

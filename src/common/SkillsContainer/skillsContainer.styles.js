@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import { theme } from "../../theme";
 import { Typography } from "../Typography/Typography";
 
 export const List = styled.ul`
@@ -20,7 +19,7 @@ export const Item = styled.li`
     display: inline-block;
     width: 9px;
     height: 9px;
-    background-color: ${theme.colors.mainBlue};
+    background-color: ${(props) => props.theme.colors.dot};
     border-radius: 50%;
     position: absolute;
     left: 0px;
@@ -33,7 +32,7 @@ export const SkillsTitle = styled(Typography)`
   margin-bottom: 13px;
 `;
 export const SkillsBorderLine = styled.div`
-  border-bottom: 1px solid ${theme.colors.border};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   width: 100%;
   margin-bottom: 32px;
 `;
