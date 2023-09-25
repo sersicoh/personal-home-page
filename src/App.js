@@ -19,9 +19,9 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      {/* <WorkInProgressComponent>
+      <WorkInProgressComponent>
         Page still work in progress <br /> Strona nadal w budowie
-      </WorkInProgressComponent> */}
+      </WorkInProgressComponent>
       <Header margin="120px auto 72px" />
       <CurrentSkills
         align={"flex-start"}
