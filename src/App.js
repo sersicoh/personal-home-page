@@ -7,9 +7,10 @@ import { PortfolioSection } from "./features/PortfolioSection/PortfolioSection";
 import { Footer } from "./features/Footer/Footer";
 import { theme } from "./theme";
 import { useState } from "react";
+import { GlobalStyle } from "./GlobalStyle";
 
 export const App = () => {
-  const [currentTheme, setTheme] = useState("darkMode");
+  const [currentTheme, setTheme] = useState("lightMode");
   const isDarkTheme = currentTheme === "darkMode";
 
   const toggleTheme = () => {
@@ -19,10 +20,14 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={selectedTheme}>
+      <GlobalStyle backgroundColor={selectedTheme.colors.background} />
       <WorkInProgressComponent>
         Page still work in progress <br /> Strona nadal w budowie
       </WorkInProgressComponent>
-      <Header margin="120px auto 72px" />
+      <Header
+        margin="120px auto 72px"
+        color={selectedTheme.colors.background}
+      />
       <CurrentSkills
         align={"flex-start"}
         shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
@@ -36,14 +41,13 @@ export const App = () => {
         margin="0px auto 72px"
       />
       <PortfolioSection
-        backgroundColor={selectedTheme.colors.backgroundContainer}
         shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
         padding="56px"
         border={`6px solid ${selectedTheme.colors.border}`}
         transition
         hoverColor={selectedTheme.colors.projectTileOnHover}
       />
-      <Footer />
+      <Footer color={selectedTheme.colors.background} />
     </ThemeProvider>
   );
 };

@@ -10,9 +10,9 @@ import {
   Mail,
 } from "./footer.styles";
 
-export const Footer = () => {
+export const Footer = (props) => {
   return (
-    <Container>
+    <Container  {...props}>
       <FooterCrumb tag={"crumb"} content={"let's talk"} />
       <Mail tag={"mail"} content={"sersicoh@gmail.com"} />
       <FooterDescription

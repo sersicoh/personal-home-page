@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 export const ButtonContainer = styled.a`
-  color: ${(props) => props.theme.colors.button};
+  color: ${(props) => props.theme.colors.buttonText};
   display: flex;
   background-color: ${(props) => props.theme.colors.backgroundButton};
   padding: 12px 16px;

@@ -3,14 +3,14 @@ import {
   Item,
   List,
   SkillContent,
-  SkillsBorderLine,
+  SkillsUnderLine,
   SkillsTitle,
 } from "./skillsContainer.styles";
 export const SkillsContainer = (props) => {
   return (
     <Container {...props}>
       <SkillsTitle tag={"h2"} content={props.header} />
-      <SkillsBorderLine />
+      <SkillsUnderLine />
       <List>
         {props.content.map((item) => (
           <Item key={item}>

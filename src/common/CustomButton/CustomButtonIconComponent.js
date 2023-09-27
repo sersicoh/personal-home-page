@@ -1,4 +1,4 @@
-export const HireButtonIconComponent = (props) => {
+export const CustomButtonIconComponent = (props) => {
   return (
     <svg
       width="24"

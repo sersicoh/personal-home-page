@@ -1,5 +1,5 @@
 import { Container } from "../../common/Container/Container";
-import { HireButton } from "./HireButton/HireButton";
+import { CustomButton } from "../../common/CustomButton/CustomButton";
 import {
   HeaderName,
   HeaderBanner,
@@ -26,7 +26,11 @@ export const Header = (props) => {
           content={`This is my private GitHub Profile. You can find hire my first serious steps with programming. I'm currently learning React, Redux, JavaScripts and I really like to learn TypeScript.`}
         />
         <HeaderButton>
-          <HireButton content={"Hire Me"} />
+          <CustomButton
+            icon
+            content={"Hire Me"}
+            href={`mailto: ${"sersicoh@gmail.com"}`}
+          />
         </HeaderButton>
       </HeaderBanner>
     </Container>

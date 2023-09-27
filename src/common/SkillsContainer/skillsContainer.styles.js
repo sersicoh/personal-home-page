@@ -31,8 +31,8 @@ export const SkillContent = styled(Typography)``;
 export const SkillsTitle = styled(Typography)`
   margin-bottom: 13px;
 `;
-export const SkillsBorderLine = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+export const SkillsUnderLine = styled.div`
+  border-bottom: 1px solid ${(props) => props.theme.colors.underLine};
   width: 100%;
   margin-bottom: 32px;
 `;

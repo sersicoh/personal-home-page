@@ -65,9 +65,10 @@ export const TypographyLink = styled.a`
   line-height: 28px;
   letter-spacing: 0.05em;
   text-decoration-color: ${(props) => props.theme.colors.projectTileOnHover};
+  text-underline-offset: 6px;
   color: ${(props) => props.color || props.theme.colors.link};
   transition: all 0.25s ease;
   &:hover {
-    color: ${(props) => props.theme.colors.buttonSelected};
+    text-decoration-color: ${(props) => props.theme.colors.link};
   }
 `;

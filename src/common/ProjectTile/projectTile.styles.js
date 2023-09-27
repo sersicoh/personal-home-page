@@ -33,5 +33,5 @@ export const Preffix = styled(Typography)`
 `;
 export const Link = styled(Typography)`
   grid-area: link;
-  color: blue;
+  color: ${(props) => props.theme.colors.link};
 `;

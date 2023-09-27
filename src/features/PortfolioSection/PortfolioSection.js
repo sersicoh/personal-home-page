@@ -15,6 +15,8 @@ import {
   gitUserRepositoriesLoadingStatus,
 } from "../../services/sliceGitUserRepositories";
 import { useEffect } from "react";
+import { LoadingComponent } from "./LoadingComponent/LoadingComponent";
+import { ErrorComponent } from "./ErrorComponent/ErrorComponent";
 
 export const PortfolioSection = (props) => {
   const dispatch = useDispatch();
@@ -27,7 +29,7 @@ export const PortfolioSection = (props) => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Container color={(props) => props.theme.colors.background}>
       <PortfolioSectionContainer>
         <PortfolioSectionHeader>
           <GithubIconComponentStyled />
@@ -38,7 +40,12 @@ export const PortfolioSection = (props) => {
           switch (fetchStatus) {
             case "null":
             case "loading":
-              return <div>ładuje</div>;
+              return (
+                <LoadingComponent
+                  color={(props) => props.theme.colors.background}
+                  maxContentSize={450}
+                />
+              );
             case "success":
               return (
                 <ProjectContainer>
@@ -57,7 +64,12 @@ export const PortfolioSection = (props) => {
                 </ProjectContainer>
               );
             case "error":
-              return <div>błąd</div>;
+              return (
+                <ErrorComponent
+                  color={(props) => props.theme.colors.background}
+                  maxContentSize={450}
+                />
+              );
             default:
               throw new Error(`invalid status: ${fetchStatus}`);
           }
