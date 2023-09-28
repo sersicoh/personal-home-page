@@ -10,13 +10,20 @@ import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 
 export const App = () => {
-  const [currentTheme, setTheme] = useState("lightMode");
+  const [currentTheme, setTheme] = useState("darkMode");
   const isDarkTheme = currentTheme === "darkMode";
 
   const toggleTheme = () => {
     setTheme(isDarkTheme ? "lightMode" : "darkMode");
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
+  //TODO zmapowac CurrentSkills i FutureSkills bo to takie same komponenty
+  //TODO zrobic darkmode switcher i zaimplementowac - jest w Header ale moze bedzie trzeba go wyniesc wlasnie tu do app
+  //TODO ogarnac breakpointy
+  //TODO zrobic mobile
+  //TODO przeniesc wszystkie tresci do jsona, wraz z obrazkiem
+  //TODO uzupelnic tresci
+  //TODO posprzatac po sobie, przerzec tak by ewentualnie poprzenosic w bardziej odpowiednie miejsca
 
   return (
     <ThemeProvider theme={selectedTheme}>

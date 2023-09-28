@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Typography } from "../../../common/Typography/Typography";
+import { ErrorIconComponent } from "../../../icons/ErrorIconComponent";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -7,8 +8,10 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const ErrorIconStyled = styled.div`
+export const ErrorIconStyled = styled(ErrorIconComponent)`
   margin-top: 88px;
+  /* fill: ${(props) => props.theme.colors.errorIcon}; */
+  stroke: ${(props) => props.theme.colors.errorIcon};
 `;
 export const HeaderStyled = styled(Typography)`
   margin-top: 16px;

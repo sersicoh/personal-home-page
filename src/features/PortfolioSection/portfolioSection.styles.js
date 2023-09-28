@@ -3,7 +3,7 @@ import { GithubIconComponent } from "../../icons/GithubIconComponent";
 import { Typography } from "../../common/Typography/Typography";
 
 export const PortfolioSectionContainer = styled.div`
-  margin: 0 auto 120px;
+  margin: 0 auto 140px;
 `;
 export const PortfolioSectionHeader = styled.div`
   display: block;

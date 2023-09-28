@@ -1,6 +1,10 @@
 import { Container } from "../../../common/Container/Container";
-import { ContentStyled, Wrapper } from "./loadingComponent.styles";
-//TODO zrobic obracający loader
+import { LoadingCircleComponent } from "../../../icons/LoadingCircleComponent";
+import {
+  ContentStyled,
+  LoadingCricleStyled,
+  Wrapper,
+} from "./loadingComponent.styles";
 export const LoadingComponent = (props) => {
   const content = "Please wait, projects are being loaded...";
 
@@ -8,6 +12,9 @@ export const LoadingComponent = (props) => {
     <Container {...props}>
       <Wrapper>
         <ContentStyled tag={"p-lead"} content={content} />
+        <LoadingCricleStyled>
+          <LoadingCircleComponent />
+        </LoadingCricleStyled>
       </Wrapper>
     </Container>
   );

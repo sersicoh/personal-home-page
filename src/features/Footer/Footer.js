@@ -12,7 +12,7 @@ import {
 
 export const Footer = (props) => {
   return (
-    <Container  {...props}>
+    <Container {...props}>
       <FooterCrumb tag={"crumb"} content={"let's talk"} />
       <Mail tag={"mail"} content={"sersicoh@gmail.com"} />
       <FooterDescription
@@ -23,8 +23,12 @@ export const Footer = (props) => {
         <LinkIconContainer href="https://github.com/sersicoh">
           <GithubIconStyled />
         </LinkIconContainer>
-        <FacebookIconStyled />
-        <LinkedinIconStyled />
+        <LinkIconContainer href="https://github.com/sersicoh">
+          <FacebookIconStyled />
+        </LinkIconContainer>
+        <LinkIconContainer href="https://github.com/sersicoh">
+          <LinkedinIconStyled />
+        </LinkIconContainer>
       </IconContainer>
     </Container>
   );

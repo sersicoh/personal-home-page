@@ -6,8 +6,7 @@ import {
   Wrapper,
 } from "./errorComponent.styles";
 import { CustomButton } from "../../../common/CustomButton/CustomButton";
-import { ErrorIconComponent } from "./ErrorIconComponent";
-//TODO przekazać color z propa dla Ikony by mogła działać na jasnym motywie
+import { ErrorIconComponent } from "../../../icons/ErrorIconComponent";
 export const ErrorComponent = (props) => {
   const header = "Ooops! Something went wrong... ";
   const content =
@@ -22,7 +21,12 @@ export const ErrorComponent = (props) => {
         </ErrorIconStyled>
         <HeaderStyled tag={"h3"} content={header} />
         <ContentStyled tag={"p-lead"} content={content} />
-        <CustomButton content={button} href={`https://github.com/sersicoh`} />
+        <CustomButton
+          content={button}
+          href={`https://github.com/sersicoh`}
+          target="_blank"
+          rel="noreferrer noopener"
+        />
       </Wrapper>
     </Container>
   );
