@@ -10,7 +10,7 @@ import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 
 export const App = () => {
-  const [currentTheme, setTheme] = useState("darkMode");
+  const [currentTheme, setTheme] = useState("lightMode");
   const isDarkTheme = currentTheme === "darkMode";
 
   const toggleTheme = () => {
@@ -18,7 +18,6 @@ export const App = () => {
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
   //TODO zmapowac CurrentSkills i FutureSkills bo to takie same komponenty
-  //TODO zrobic darkmode switcher i zaimplementowac - jest w Header ale moze bedzie trzeba go wyniesc wlasnie tu do app
   //TODO ogarnac breakpointy
   //TODO zrobic mobile
   //TODO przeniesc wszystkie tresci do jsona, wraz z obrazkiem
@@ -34,18 +33,23 @@ export const App = () => {
       <Header
         margin="120px auto 72px"
         color={selectedTheme.colors.background}
+        isDarkTheme={isDarkTheme}
+        toggleTheme={toggleTheme}
+        transition
       />
       <CurrentSkills
         align={"flex-start"}
         shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
         padding="32px"
         margin="0px auto 72px"
+        transition
       />
       <FutureSkills
         align={"flex-start"}
         shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
         padding="32px"
         margin="0px auto 72px"
+        transition
       />
       <PortfolioSection
         shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
@@ -54,7 +58,7 @@ export const App = () => {
         transition
         hoverColor={selectedTheme.colors.projectTileOnHover}
       />
-      <Footer color={selectedTheme.colors.background} />
+      <Footer color={selectedTheme.colors.background} transition />
     </ThemeProvider>
   );
 };

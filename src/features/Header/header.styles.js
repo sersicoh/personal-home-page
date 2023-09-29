@@ -21,10 +21,11 @@ export const SelfieImage = styled.img`
   border-radius: 50%;
   margin-right: 72px;
 `;
-export const HeaderDarkMode = styled.div`
+export const DarkModeSwitcher = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-bottom: 38px;
+  align-items: center;
 `;
 export const HeaderCrumb = styled(Typography)`
   grid-area: crumb;

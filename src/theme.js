@@ -16,7 +16,6 @@ export const colors = {
   mineShaftLight: "#363636",
   violet: "#090A330A",
 };
-
 export const theme = {
   breakpoint: {
     mobileMax: 767,
@@ -54,6 +53,9 @@ export const theme = {
       border: colors.manatee,
       projectTileTitle: colors.scienceBlue,
       projectTileOnHover: colors.blueBayoux,
+      switcherContainer: colors.mercury,
+      switcherDot: colors.slateGray,
+      sunIcon: colors.white,
     },
   },
   darkMode: {
@@ -87,6 +89,9 @@ export const theme = {
       border: colors.manatee,
       projectTileTitle: colors.white,
       projectTileOnHover: colors.azureRadiance,
+      switcherContainer: colors.mineShaftLight,
+      switcherDot: colors.white,
+      sunIcon: colors.mineShaft,
     },
   },
 };

@@ -1,5 +1,6 @@
 import { Container } from "../../common/Container/Container";
 import { CustomButton } from "../../common/CustomButton/CustomButton";
+import { SwitchTheme } from "../../common/SwitchTheme/SwitchTheme";
 import {
   HeaderName,
   HeaderBanner,
@@ -7,7 +8,7 @@ import {
   HeaderCrumb,
   HeaderDescription,
   HeaderButton,
-  HeaderDarkMode,
+  DarkModeSwitcher,
 } from "./header.styles";
 
 export const Header = (props) => {
@@ -18,7 +19,13 @@ export const Header = (props) => {
           src="https://lh3.googleusercontent.com/a/AAcHTted5zjPNUv2Zh-pzL1Ff8lDBi2xikWohywcgbWnShwpYoS0=s288-c-no"
           alt="My seflie photo"
         />
-        <HeaderDarkMode>darkmode</HeaderDarkMode>
+        <DarkModeSwitcher>
+          <SwitchTheme
+            isDarkTheme={props.isDarkTheme}
+            toggleTheme={props.toggleTheme}
+          />
+        </DarkModeSwitcher>
+
         <HeaderCrumb tag={"crumb"} content={"this is"} />
         <HeaderName tag={"h1"} content={"Wojciech Szymczak"} />
         <HeaderDescription

@@ -17,5 +17,6 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0 32px;
       background: ${(props) => props.backgroundColor};
       font-family: 'Inter', sans-serif;
+      transition: 0.7s;
     }
 `;

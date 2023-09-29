@@ -11,10 +11,12 @@ export const ContainerStyled = styled.div`
   border-radius: 4px;
   padding: ${(props) => (props.padding ? props.padding : null)};
   border: ${(props) => (props.border ? props.border : null)};
-  background-color: ${(props) => props.color || props.theme.colors.backgroundContainer};
-  max-width: ${(props) => props.maxContentSize || theme.breakpoint.maxContentSize}px;
+  background-color: ${(props) =>
+    props.color || props.theme.colors.backgroundContainer};
+  max-width: ${(props) =>
+    props.maxContentSize || theme.breakpoint.maxContentSize}px;
   box-shadow: ${(props) => (props.shadow ? props.shadow : null)};
-  transition: ${(props) => (props.transition ? "all 0.25s ease" : null)};
+  transition: ${(props) => (props.transition ? `all 0.7s ease` : null)};
   &:hover {
     border-color: ${(props) => (props.hoverColor ? props.hoverColor : null)};
   }

@@ -23,13 +23,15 @@ export const PortfolioSection = (props) => {
 
   const fetchStatus = useSelector(gitUserRepositoriesLoadingStatus);
   const repositories = useSelector(gitUserRepositories);
-  console.log(fetchStatus);
   useEffect(() => {
     dispatch(fetchRepositories("sersicoh"));
   }, [dispatch]);
 
   return (
-    <Container color={(props) => props.theme.colors.background}>
+    <Container
+      color={(props) => props.theme.colors.background}
+      transition={`all 0.4s ease`}
+    >
       <PortfolioSectionContainer>
         <PortfolioSectionHeader>
           <GithubIconComponentStyled />
