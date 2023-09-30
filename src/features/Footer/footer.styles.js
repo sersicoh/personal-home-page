@@ -41,4 +41,8 @@ export const LinkedinIconStyled = styled(LinkedinIconComponent)`
   }
 `;
 //TODO dokonczyc linkowanie i stylowanie ikon
-export const LinkIconContainer = styled.a``;
+export const LinkIconContainer = styled.a`
+  :active {
+    fill: ${(props) => props.theme.colors.iconHover};
+  }
+`;

@@ -30,7 +30,7 @@ export const theme = {
       h2: colors.mineShaft,
       h3: colors.mineShaft,
       underLine: colors.mercury,
-      paragraphMid: colors.mineShaft,
+      paragraphMid: colors.slateGray,
       paragraphLead: colors.slateGray,
       mail: colors.mineShaft,
       mailHover: colors.scienceBlue,

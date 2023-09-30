@@ -10,23 +10,24 @@ import {
   Mail,
 } from "./footer.styles";
 
-export const Footer = (props) => {
+export const Footer = ({ content, ...props }) => {
   return (
     <Container {...props}>
       <FooterCrumb tag={"crumb"} content={"let's talk"} />
-      <Mail tag={"mail"} content={"sersicoh@gmail.com"} />
+      <Mail tag={"mail"} content={content.mail} />
       <FooterDescription
         tag={"p-mid"}
-        content={`This is my private GitHub Profile. You can find hire my first serious steps with programming. I'm currently learning React, Redux, JavaScripts and I really like to learn TypeScript.`}
+        color={(props) => props.theme.colors.mail}
+        content={content.description}
       />
       <IconContainer>
-        <LinkIconContainer href="https://github.com/sersicoh">
+        <LinkIconContainer href={content.github_link}>
           <GithubIconStyled />
         </LinkIconContainer>
-        <LinkIconContainer href="https://github.com/sersicoh">
+        <LinkIconContainer href={content.facebook_link}>
           <FacebookIconStyled />
         </LinkIconContainer>
-        <LinkIconContainer href="https://github.com/sersicoh">
+        <LinkIconContainer href={content.linkedIn_link}>
           <LinkedinIconStyled />
         </LinkIconContainer>
       </IconContainer>

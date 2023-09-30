@@ -9,9 +9,10 @@ import { CustomButton } from "../../../common/CustomButton/CustomButton";
 import { ErrorIconComponent } from "../../../icons/ErrorIconComponent";
 export const ErrorComponent = (props) => {
   const header = "Ooops! Something went wrong... ";
-  const content =
+  const description =
     "Sorry, failed to load Github projects. You can check them directly on Github.";
   const button = "Go to Github";
+  const href = "https://github.com/sersicoh";
 
   return (
     <Container {...props}>
@@ -20,10 +21,10 @@ export const ErrorComponent = (props) => {
           <ErrorIconComponent />
         </ErrorIconStyled>
         <HeaderStyled tag={"h3"} content={header} />
-        <ContentStyled tag={"p-lead"} content={content} />
+        <ContentStyled tag={"p-lead"} content={description} />
         <CustomButton
           content={button}
-          href={`https://github.com/sersicoh`}
+          href={href}
           target="_blank"
           rel="noreferrer noopener"
         />

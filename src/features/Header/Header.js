@@ -11,7 +11,7 @@ import {
   DarkModeSwitcher,
 } from "./header.styles";
 
-export const Header = (props) => {
+export const Header = ({ content, ...props }) => {
   return (
     <Container {...props}>
       <HeaderBanner>
@@ -25,18 +25,14 @@ export const Header = (props) => {
             toggleTheme={props.toggleTheme}
           />
         </DarkModeSwitcher>
-
         <HeaderCrumb tag={"crumb"} content={"this is"} />
-        <HeaderName tag={"h1"} content={"Wojciech Szymczak"} />
-        <HeaderDescription
-          tag={"p-lead"}
-          content={`This is my private GitHub Profile. You can find hire my first serious steps with programming. I'm currently learning React, Redux, JavaScripts and I really like to learn TypeScript.`}
-        />
+        <HeaderName tag={"h1"} content={content.name} />
+        <HeaderDescription tag={"p-lead"} content={content.description} />
         <HeaderButton>
           <CustomButton
             icon
             content={"Hire Me"}
-            href={`mailto: ${"sersicoh@gmail.com"}`}
+            href={`mailto: ${content.mail}`}
           />
         </HeaderButton>
       </HeaderBanner>

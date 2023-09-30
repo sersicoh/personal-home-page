@@ -5,19 +5,22 @@ import {
   SkillContent,
   SkillsUnderLine,
   SkillsTitle,
+  SkillWrapper,
 } from "./skillsContainer.styles";
-export const SkillsContainer = (props) => {
+export const SkillsContainer = ({ content, ...props }) => {
   return (
     <Container {...props}>
-      <SkillsTitle tag={"h2"} content={props.header} />
-      <SkillsUnderLine />
-      <List>
-        {props.content.map((item) => (
-          <Item key={item}>
-            {<SkillContent tag={"p-lead"} content={item} />}
-          </Item>
-        ))}
-      </List>
+      <SkillWrapper>
+        <SkillsTitle tag={"h2"} content={content.title} />
+        <SkillsUnderLine />
+        <List>
+          {content.skills.map((skill) => (
+            <Item key={skill}>
+              {<SkillContent tag={"p-mid"} content={skill} />}
+            </Item>
+          ))}
+        </List>
+      </SkillWrapper>
     </Container>
   );
 };

@@ -6,6 +6,7 @@ export const List = styled.ul`
   width: 100%;
   row-gap: 8px;
   padding: 0;
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
 `;
 
@@ -26,6 +27,11 @@ export const Item = styled.li`
     top: 50%;
     transform: translateY(-50%);
   }
+`;
+
+export const SkillWrapper = styled.div`
+  width: calc(100% - 64px);
+  padding: 32px;
 `;
 export const SkillContent = styled(Typography)``;
 export const SkillsTitle = styled(Typography)`
