@@ -28,10 +28,7 @@ export const PortfolioSection = (props) => {
   }, [dispatch]);
 
   return (
-    <Container
-      color={(props) => props.theme.colors.background}
-      transition={`all 0.4s ease`}
-    >
+    <Container color={(props) => props.theme.colors.background}>
       <PortfolioSectionContainer>
         <PortfolioSectionHeader>
           <GithubIconComponentStyled />

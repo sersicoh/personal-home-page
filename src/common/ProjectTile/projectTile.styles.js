@@ -34,4 +34,7 @@ export const Preffix = styled(Typography)`
 export const Link = styled(Typography)`
   grid-area: link;
   color: ${(props) => props.theme.colors.link};
+  white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
