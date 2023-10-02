@@ -9,14 +9,14 @@ export const SwitcherContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${breakpoints.tabletMax}px) {
-    justify-content: flex-end;
+  @media (max-width: ${breakpoints.mobileMax}px) {
+    width: max-content;
   }
 `;
 export const SwitcherText = styled(Typography)`
   transition: 1.4s;
 
-    @media (max-width: ${breakpoints.tabletMax}px) {
+  @media (max-width: ${breakpoints.mobileMax}px) {
     display: none;
   }
 `;

@@ -8,6 +8,7 @@ import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { content } from "./content";
 import { SkillsContainer } from "./common/SkillsContainer/SkillsContainer";
+import useDesktop from "./hooks/useDesktop";
 
 export const App = () => {
   const [currentTheme, setTheme] = useState("darkMode");
@@ -21,14 +22,20 @@ export const App = () => {
   //TODO zrobic mobile
   //TODO uzupelnic tresci
   //TODO posprzatac po sobie, przerzec tak by ewentualnie poprzenosic w bardziej odpowiednie miejsca
+
+  const isDesktop = useDesktop();
+  // console.log(window.innerWidth);
   return (
     <ThemeProvider theme={selectedTheme}>
-      <GlobalStyle backgroundColor={selectedTheme.colors.background} />
-      {/* <WorkInProgressComponent>
+      <GlobalStyle
+        backgroundColor={selectedTheme.colors.background}
+        breakpoints={breakpoints}
+      />
+      <WorkInProgressComponent>
         Page still work in progress <br /> Strona nadal w budowie
-      </WorkInProgressComponent> */}
+      </WorkInProgressComponent>
       <Header
-        margin="120px auto 72px"
+        margin={isDesktop ? "120px auto 72px" : "34px auto 0px"}
         color={selectedTheme.colors.background}
         isDarkTheme={isDarkTheme}
         toggleTheme={toggleTheme}

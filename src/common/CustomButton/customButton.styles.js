@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { breakpoints } from "../../theme";
 export const ButtonContainer = styled.a`
   color: ${(props) => props.theme.colors.buttonText};
   display: flex;
@@ -17,7 +18,8 @@ export const ButtonContainer = styled.a`
     transform: scale(95%);
   }
   &:active {
-    box-shadow: 0px 2px 0px 0px ${(props) => props.theme.colors.buttonSelected} inset;
+    box-shadow: 0px 2px 0px 0px ${(props) => props.theme.colors.buttonSelected}
+      inset;
   }
 `;
 
@@ -25,4 +27,9 @@ export const ButtonTextStyled = styled.div`
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
+
+  @media (max-width: ${breakpoints.mobileMax}px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 `;

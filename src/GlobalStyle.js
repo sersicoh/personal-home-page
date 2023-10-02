@@ -18,5 +18,9 @@ export const GlobalStyle = createGlobalStyle`
       background: ${(props) => props.backgroundColor};
       font-family: 'Inter', sans-serif;
       transition: 0.7s;
+
+      @media (max-width: ${(props) => props.breakpoints.mobileMax}px) {
+        padding: 0 16px;
+      }
     }
 `;
