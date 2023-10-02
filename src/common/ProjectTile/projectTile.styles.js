@@ -21,8 +21,9 @@ export const RowContainer = styled.div`
 
 export const ColumnContainer = styled.div`
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 60px 1fr;
   justify-content: center;
+  gap: 8px;
   grid-template-areas:
     "preffix link"
     "preffix link";
