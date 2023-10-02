@@ -1,4 +1,5 @@
 import { Container } from "../../common/Container/Container";
+import useDesktop from "../../hooks/useDesktop";
 import {
   FacebookIconStyled,
   FooterCrumb,
@@ -11,6 +12,7 @@ import {
 } from "./footer.styles";
 
 export const Footer = ({ content, ...props }) => {
+  const isDesktop = useDesktop();
   return (
     <Container {...props}>
       <FooterCrumb tag={"crumb"} content={"let's talk"} />
@@ -22,13 +24,22 @@ export const Footer = ({ content, ...props }) => {
       />
       <IconContainer>
         <LinkIconContainer href={content.github_link}>
-          <GithubIconStyled />
+          <GithubIconStyled
+            width={isDesktop ? 48 : 32}
+            height={isDesktop ? 48 : 32}
+          />
         </LinkIconContainer>
         <LinkIconContainer href={content.facebook_link}>
-          <FacebookIconStyled />
+          <FacebookIconStyled
+            width={isDesktop ? 48 : 32}
+            height={isDesktop ? 48 : 32}
+          />
         </LinkIconContainer>
         <LinkIconContainer href={content.linkedIn_link}>
-          <LinkedinIconStyled />
+          <LinkedinIconStyled
+            width={isDesktop ? 48 : 32}
+            height={isDesktop ? 48 : 32}
+          />
         </LinkIconContainer>
       </IconContainer>
     </Container>

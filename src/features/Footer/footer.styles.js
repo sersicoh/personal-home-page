@@ -3,23 +3,42 @@ import { Typography } from "../../common/Typography/Typography";
 import { GithubIconComponent } from "../../icons/GithubIconComponent";
 import { FacebookIconComponent } from "../../icons/FacebookIconComponent";
 import { LinkedinIconComponent } from "../../icons/LinkedinIconComponent";
+import { breakpoints } from "../../theme";
 
 export const FooterCrumb = styled(Typography)`
   margin-bottom: 24px;
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    margin-bottom: 12px;
+  }
 `;
 export const Mail = styled(Typography)`
   margin-bottom: 24px;
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const FooterDescription = styled(Typography)`
   margin-bottom: 56px;
   width: 60%;
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   gap: 24px;
   margin-bottom: 109px;
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    gap: 16px;
+    margin-bottom: 31px;
+  }
 `;
 
 export const GithubIconStyled = styled(GithubIconComponent)`

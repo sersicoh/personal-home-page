@@ -18,13 +18,11 @@ export const App = () => {
     setTheme(isDarkTheme ? "lightMode" : "darkMode");
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
-  //TODO ogarnac breakpointy
-  //TODO zrobic mobile
+  //TODO dokonczyc stylowanie calego PortfolioSection dla mobile
   //TODO uzupelnic tresci
   //TODO posprzatac po sobie, przerzec tak by ewentualnie poprzenosic w bardziej odpowiednie miejsca
 
   const isDesktop = useDesktop();
-  // console.log(window.innerWidth);
   return (
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyle
@@ -47,14 +45,14 @@ export const App = () => {
           key={skillType}
           align={"flex-start"}
           shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
-          margin="0px auto 72px"
+          margin={isDesktop ? "0px auto 72px" : "0 auto 48px"}
           transition
           content={skillType}
         />
       ))}
       <PortfolioSection
         shadow={`0px 16px 58px 0px ${selectedTheme.colors.shadow}`}
-        padding="56px"
+        padding={isDesktop ? "56px" : "24px"}
         border={`6px solid ${selectedTheme.colors.border}`}
         transition
         hoverColor={selectedTheme.colors.projectTileOnHover}

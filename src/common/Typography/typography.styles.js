@@ -18,8 +18,12 @@ export const TypographyHeaderH2 = styled.h2`
   margin: 0;
   letter-spacing: 0.05em;
   color: ${(props) => props.color || props.theme.colors.h2};
-`;
 
+  @media (max-width: ${breakpoints.mobileMax}px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+`;
 export const TypographyHeaderH3 = styled.h3`
   font-weight: 700;
   font-size: 24px;
@@ -34,6 +38,11 @@ export const TypographyParagraphMid = styled.p`
   line-height: 25.2px;
   letter-spacing: 0.05em;
   color: ${(props) => props.color || props.theme.colors.paragraphMid};
+
+  @media (max-width: ${breakpoints.mobileMax}px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 `;
 export const TypographyParagraphLead = styled.p`
   font-weight: 400;
@@ -63,8 +72,13 @@ export const TypographyMailLink = styled.a`
   text-decoration: none;
   color: ${(props) => props.color || props.theme.colors.mail};
   transition: all 0.25s ease;
+
   &:hover {
     color: ${(props) => props.color || props.theme.colors.mailHover};
+  }
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    font-size: 18px;
   }
 `;
 export const TypographyLink = styled.a`
