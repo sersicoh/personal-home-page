@@ -3,7 +3,7 @@ import { WorkInProgressComponent } from "./WorkInProgressComponent.styles";
 import { Header } from "./features/Header/Header";
 import { PortfolioSection } from "./features/PortfolioSection/PortfolioSection";
 import { Footer } from "./features/Footer/Footer";
-import { theme } from "./theme";
+import { theme, breakpoints } from "./theme";
 import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { content } from "./content";
@@ -24,9 +24,9 @@ export const App = () => {
   return (
     <ThemeProvider theme={selectedTheme}>
       <GlobalStyle backgroundColor={selectedTheme.colors.background} />
-      <WorkInProgressComponent>
+      {/* <WorkInProgressComponent>
         Page still work in progress <br /> Strona nadal w budowie
-      </WorkInProgressComponent>
+      </WorkInProgressComponent> */}
       <Header
         margin="120px auto 72px"
         color={selectedTheme.colors.background}

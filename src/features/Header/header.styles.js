@@ -1,25 +1,34 @@
 import { styled } from "styled-components";
 import { Typography } from "../../common/Typography/Typography";
+import { breakpoints } from "../../theme";
 
 export const HeaderBanner = styled.section`
   display: grid;
   width: 100%;
   justify-content: center;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: minmax(300px, 1fr) 2fr;
+  column-gap: 72px;
   grid-template-areas:
     "selfie darkMode"
     "selfie crumb"
     "selfie name"
     "selfie description"
     "selfie button";
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    column-gap: 36px;
+  }
 `;
 
-export const SelfieImage = styled.img`
+export const SelfieImageContainer = styled.section`
   grid-area: selfie;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  overflow: hidden;
+`;
+export const SelfieImage = styled.img`
+  display: block;
+  max-width: 100%;
   border-radius: 50%;
-  margin-right: 72px;
 `;
 export const DarkModeSwitcher = styled.div`
   display: flex;

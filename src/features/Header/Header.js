@@ -9,16 +9,19 @@ import {
   HeaderDescription,
   HeaderButton,
   DarkModeSwitcher,
+  SelfieImageContainer,
 } from "./header.styles";
 
 export const Header = ({ content, ...props }) => {
   return (
     <Container {...props}>
       <HeaderBanner>
-        <SelfieImage
-          src="https://lh3.googleusercontent.com/a/AAcHTted5zjPNUv2Zh-pzL1Ff8lDBi2xikWohywcgbWnShwpYoS0=s288-c-no"
-          alt="My seflie photo"
-        />
+        <SelfieImageContainer>
+          <SelfieImage
+            src="https://avatars.githubusercontent.com/u/106604791?v=4"
+            alt="My seflie photo"
+          />
+        </SelfieImageContainer>
         <DarkModeSwitcher>
           <SwitchTheme
             isDarkTheme={props.isDarkTheme}

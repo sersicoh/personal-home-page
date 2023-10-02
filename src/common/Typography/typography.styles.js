@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { breakpoints } from "../../theme";
 
 export const TypographyHeaderH1 = styled.h1`
   font-weight: 900;
@@ -6,6 +7,10 @@ export const TypographyHeaderH1 = styled.h1`
   margin: 0;
   letter-spacing: 0.05em;
   color: ${(props) => props.color || props.theme.colors.h1};
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    font-size: 30px;
+  }
 `;
 export const TypographyHeaderH2 = styled.h2`
   font-weight: 900;
@@ -37,6 +42,10 @@ export const TypographyParagraphLead = styled.p`
   line-height: 28px;
   letter-spacing: 0.05em;
   color: ${(props) => props.color || props.theme.colors.paragraphLead};
+
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    font-size: 17px;
+  }
 `;
 
 export const TypographyCrumb = styled.p`

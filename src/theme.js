@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   white: "#ffffff",
   whiteLilac: "#FBFBFE",
   mercury: "#E5E5E5FF",
@@ -16,12 +16,13 @@ export const colors = {
   mineShaftLight: "#363636",
   violet: "#090A330A",
 };
+
+export const breakpoints = {
+  mobileMax: 767,
+  tabletMax: 960,
+  maxContentSize: 1216,
+};
 export const theme = {
-  breakpoint: {
-    mobileMax: 767,
-    tabletMax: 960,
-    maxContentSize: 1216,
-  },
   lightMode: {
     colors: {
       background: colors.whiteLilac,
