@@ -1,5 +1,4 @@
 import { ThemeProvider } from "styled-components";
-import { WorkInProgressComponent } from "./WorkInProgressComponent.styles";
 import { Header } from "./features/Header/Header";
 import { PortfolioSection } from "./features/PortfolioSection/PortfolioSection";
 import { Footer } from "./features/Footer/Footer";
@@ -18,7 +17,6 @@ export const App = () => {
     setTheme(isDarkTheme ? "lightMode" : "darkMode");
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
-  //TODO uzupelnic tresci
   //TODO posprzatac po sobie, przerzec tak by ewentualnie poprzenosic w bardziej odpowiednie miejsca
 
   const isDesktop = useDesktop();
@@ -28,9 +26,6 @@ export const App = () => {
         backgroundColor={selectedTheme.colors.background}
         breakpoints={breakpoints}
       />
-      <WorkInProgressComponent>
-        Page still work in progress <br /> Strona nadal w budowie
-      </WorkInProgressComponent>
       <Header
         margin={isDesktop ? "120px auto 72px" : "34px auto 0px"}
         color={selectedTheme.colors.background}

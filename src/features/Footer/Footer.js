@@ -20,7 +20,14 @@ export const Footer = ({ content, ...props }) => {
       <FooterDescription
         tag={"p-mid"}
         color={(props) => props.theme.colors.mail}
-        content={content.description}
+        content={
+          <>
+            {content.description}{" "}
+            {content.repo_link ? (
+              <a href={content.repo_link}>{content.repo_text}</a>
+            ) : null}
+          </>
+        }
       />
       <IconContainer>
         <LinkIconContainer href={content.github_link}>

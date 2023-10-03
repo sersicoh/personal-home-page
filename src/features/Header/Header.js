@@ -18,7 +18,7 @@ export const Header = ({ content, ...props }) => {
       <HeaderBanner>
         <SelfieImageContainer>
           <SelfieImage
-            src="https://avatars.githubusercontent.com/u/106604791?v=4"
+            src={content.photo_link}
             alt="My seflie photo"
           />
         </SelfieImageContainer>
