@@ -3,6 +3,7 @@ import { breakpoints } from "../../theme";
 
 export const ContainerStyled = styled.div`
   display: flex;
+  width: 100%;
   margin: 0 auto;
   margin: ${(props) => (props.margin ? props.margin : null)};
   flex-direction: column;

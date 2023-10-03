@@ -41,7 +41,7 @@ export const TypographyParagraphMid = styled.p`
 
   @media (max-width: ${breakpoints.mobileMax}px) {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 20px;
   }
 `;
 export const TypographyParagraphLead = styled.p`
@@ -93,5 +93,8 @@ export const TypographyLink = styled.a`
   transition: all 0.25s ease;
   &:hover {
     text-decoration-color: ${(props) => props.theme.colors.link};
+  }
+  @media (max-width: ${breakpoints.tabletMax}px) {
+    font-size: 17px;
   }
 `;

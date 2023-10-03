@@ -6,6 +6,7 @@ import {
   Preffix,
   RowContainer,
   Title,
+  Wrapper,
 } from "./projectTile.styles";
 
 export const ProjectTile = ({
@@ -16,23 +17,25 @@ export const ProjectTile = ({
   ...props
 }) => {
   return (
-    <Container {...props}>
-      <Title
-        tag={"h3"}
-        content={name}
-        color={(props) => props.theme.colors.projectTileTitle}
-      />
-      <Description tag={"p-lead"} content={description} />
-      <RowContainer>
-        <ColumnContainer>
-          <Preffix tag={"p-lead"} content={"Demo:"} />
-          <Link tag={"a"} href={homepage} content={homepage} />
-        </ColumnContainer>
-        <ColumnContainer>
-          <Preffix tag={"p-lead"} content={"Code:"} />
-          <Link tag={"a"} href={html_url} content={html_url} />
-        </ColumnContainer>
-      </RowContainer>
-    </Container>
+    <Wrapper>
+      <Container {...props}>
+        <Title
+          tag={"h3"}
+          content={name}
+          color={(props) => props.theme.colors.projectTileTitle}
+        />
+        <Description tag={"p-lead"} content={description} />
+        <RowContainer>
+          <ColumnContainer>
+            <Preffix tag={"p-lead"} content={"Demo:"} />
+            <Link tag={"a"} href={homepage} content={homepage} />
+          </ColumnContainer>
+          <ColumnContainer>
+            <Preffix tag={"p-lead"} content={"Code:"} />
+            <Link tag={"a"} href={html_url} content={html_url} />
+          </ColumnContainer>
+        </RowContainer>
+      </Container>
+    </Wrapper>
   );
 };

@@ -18,7 +18,6 @@ export const App = () => {
     setTheme(isDarkTheme ? "lightMode" : "darkMode");
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
-  //TODO dokonczyc stylowanie calego PortfolioSection dla mobile
   //TODO uzupelnic tresci
   //TODO posprzatac po sobie, przerzec tak by ewentualnie poprzenosic w bardziej odpowiednie miejsca
 

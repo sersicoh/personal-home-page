@@ -1,6 +1,9 @@
 import { styled } from "styled-components";
 import { Typography } from "../Typography/Typography";
 
+export const Wrapper = styled.div`
+  display: flex;
+`;
 export const Title = styled(Typography)`
   margin-bottom: 24px;
 `;
