@@ -10,7 +10,7 @@ import { SkillsContainer } from "./common/SkillsContainer/SkillsContainer";
 import useDesktop from "./hooks/useDesktop";
 
 export const App = () => {
-  const [currentTheme, setTheme] = useState("darkMode");
+  const [currentTheme, setTheme] = useState("lightMode");
   const isDarkTheme = currentTheme === "darkMode";
 
   const toggleTheme = () => {
