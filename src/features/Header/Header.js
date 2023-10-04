@@ -17,10 +17,7 @@ export const Header = ({ content, ...props }) => {
     <Container {...props}>
       <HeaderBanner>
         <SelfieImageContainer>
-          <SelfieImage
-            src={content.photo_link}
-            alt="My seflie photo"
-          />
+          <SelfieImage src={content.photo_link} alt="My seflie photo" />
         </SelfieImageContainer>
         <DarkModeSwitcher>
           <SwitchTheme

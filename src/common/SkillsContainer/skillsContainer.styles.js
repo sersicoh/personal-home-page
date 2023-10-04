@@ -14,7 +14,6 @@ export const List = styled.ul`
     grid-template-columns: 1fr;
   }
 `;
-
 export const Item = styled.li`
   position: relative;
   list-style: none;
@@ -42,7 +41,6 @@ export const Item = styled.li`
     }
   }
 `;
-
 export const SkillWrapper = styled.div`
   width: calc(100% - 64px);
   padding: 32px;

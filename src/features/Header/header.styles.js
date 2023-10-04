@@ -30,7 +30,6 @@ export const HeaderBanner = styled.section`
       "button";
   }
 `;
-
 export const SelfieImageContainer = styled.section`
   grid-area: selfie;
   width: 100%;
@@ -85,7 +84,6 @@ export const HeaderDescription = styled(Typography)`
     padding-bottom: 24px;
   }
 `;
-
 export const HeaderButton = styled.div`
   grid-area: button;
   padding-bottom: 70px;

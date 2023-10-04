@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
 export const ErrorIconStyled = styled(ErrorIconComponent)`
   margin-top: 88px;
   /* fill: ${(props) => props.theme.colors.errorIcon}; */

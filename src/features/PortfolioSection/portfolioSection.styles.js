@@ -32,7 +32,6 @@ export const PortfolioTitle = styled(Typography)`
 export const PortfolioSubTitle = styled(Typography)`
   margin-bottom: 24px;
 `;
-
 export const ProjectContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

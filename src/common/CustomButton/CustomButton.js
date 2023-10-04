@@ -1,5 +1,5 @@
 import useDesktop from "../../hooks/useDesktop";
-import { CustomButtonIconComponent } from "./CustomButtonIconComponent";
+import { CustomButtonIconComponent } from "../../icons/CustomButtonIconComponent";
 import { ButtonContainer, ButtonTextStyled } from "./customButton.styles";
 
 export const CustomButton = ({ icon, content, href, rel, target }) => {

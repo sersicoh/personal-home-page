@@ -56,7 +56,6 @@ export const TypographyParagraphLead = styled.p`
     font-size: 17px;
   }
 `;
-
 export const TypographyCrumb = styled.p`
   font-weight: 700;
   font-size: 12px;

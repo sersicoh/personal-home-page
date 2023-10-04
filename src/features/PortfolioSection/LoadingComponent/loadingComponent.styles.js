@@ -6,11 +6,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
 export const ContentStyled = styled(Typography)`
   margin-top: 88px;
 `;
-
 export const LoadingCricleStyled = styled.div`
   margin-top: 48px;
   height: 160px;

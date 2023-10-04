@@ -22,7 +22,6 @@ export const ButtonContainer = styled.a`
       inset;
   }
 `;
-
 export const ButtonTextStyled = styled.div`
   font-size: 20px;
   line-height: 24px;

@@ -31,7 +31,6 @@ export const SwitcherButton = styled.button`
   transition: 1.4s;
   cursor: pointer;
 `;
-
 export const SwitcherButtonDot = styled.div`
   display: flex;
   width: 20px;
@@ -48,5 +47,4 @@ export const SwitcherButtonDot = styled.div`
       transform: translateX(20px);
     `}
 `;
-
 export const SunIconStyled = styled(SunIconComponent)``;

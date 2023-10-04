@@ -13,6 +13,7 @@ import {
 
 export const Footer = ({ content, ...props }) => {
   const isDesktop = useDesktop();
+
   return (
     <Container {...props}>
       <FooterCrumb tag={"crumb"} content={"let's talk"} />

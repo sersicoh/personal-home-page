@@ -19,7 +19,6 @@ export const Mail = styled(Typography)`
     margin-bottom: 12px;
   }
 `;
-
 export const FooterDescription = styled(Typography)`
   margin-bottom: 56px;
   width: 60%;
@@ -29,7 +28,6 @@ export const FooterDescription = styled(Typography)`
     margin-bottom: 40px;
   }
 `;
-
 export const IconContainer = styled.div`
   display: flex;
   gap: 24px;
@@ -40,7 +38,6 @@ export const IconContainer = styled.div`
     margin-bottom: 31px;
   }
 `;
-
 export const GithubIconStyled = styled(GithubIconComponent)`
   transition: all 0.25s ease;
   :hover {
@@ -59,7 +56,6 @@ export const LinkedinIconStyled = styled(LinkedinIconComponent)`
     fill: ${(props) => props.theme.colors.iconHover};
   }
 `;
-//TODO dokonczyc linkowanie i stylowanie ikon
 export const LinkIconContainer = styled.a`
   :active {
     fill: ${(props) => props.theme.colors.iconHover};

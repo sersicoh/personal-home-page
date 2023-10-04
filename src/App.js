@@ -17,7 +17,6 @@ export const App = () => {
     setTheme(isDarkTheme ? "lightMode" : "darkMode");
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
-  //TODO posprzatac po sobie, przerzec tak by ewentualnie poprzenosic w bardziej odpowiednie miejsca
 
   const isDesktop = useDesktop();
   return (
