@@ -17,7 +17,7 @@ export const App = () => {
     setTheme(isDarkTheme ? "lightMode" : "darkMode");
   };
   const selectedTheme = isDarkTheme ? theme.darkMode : theme.lightMode;
-//test git
+
   const isDesktop = useDesktop();
   return (
     <ThemeProvider theme={selectedTheme}>
